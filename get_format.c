@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_format - the function found the right function to use 
+ * get_format - the function found the right function to use
  * according to the format given
  *
  * @c: the format wanted
@@ -19,15 +19,16 @@ int get_format(const char c, va_list args)
 	{'\0', NULL}
 	};
 	int i = 0;
+	int count = 0;
 
 	while (type[i].type != '\0')
 	{
 		if (type[i].type == c)
 		{
-			type[i].f(args);
+			count = type[i].f(args);
 			break;
 		}
 		i++;
 	}
-	return(0);
+	return (count);
 }
