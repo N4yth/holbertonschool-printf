@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * get_format - the function found the right function to use 
@@ -11,12 +11,12 @@
  * Return: Nothing
  */
 
-void get_format(char *c, va_list args)
+int get_format(const char c, va_list args)
 {
 	type_t type[] = {
-	{"s", op_add},
-	{"c", op_sub},
-	{NULL, NULL}
+	{'s', print_string},
+	{'c', print_char},
+	{'\0', NULL}
 	};
 	int i = 0;
 
@@ -24,9 +24,10 @@ void get_format(char *c, va_list args)
 	{
 		if (type[i].type == c)
 		{
-			type[i].f(&args);
+			type[i].f(args);
 			break;
 		}
 		i++;
 	}
+	return(0);
 }
