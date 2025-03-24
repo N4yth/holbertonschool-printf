@@ -15,7 +15,7 @@
 typedef struct type
 {
 	char type;
-	void (*f)(va_list);
+	int (*f)(va_list);
 
 } type_t;
 
