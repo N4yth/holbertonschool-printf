@@ -15,7 +15,7 @@
 typedef struct type
 {
 	char type;
-	void (*f)(va_list *args);
+	void (*f)(va_list);
 
 } type_t;
 
@@ -23,7 +23,7 @@ int _putchar(char c);
 
 int _printf(const char *format, ...);
 
-void get_format(char *c, va_list args);
+int get_format(const char c, va_list arg);
 
 void print_char(va_list args);
 void print_string(va_list args);
