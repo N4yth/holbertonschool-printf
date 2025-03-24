@@ -13,7 +13,8 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	unsigned int i = 0, count_length = 0;
+	unsigned int i = 0;
+	int count_length = 0;
 
 	va_start(args, format);
 
@@ -21,7 +22,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			get_format(format[i++], args);
+			count_length += get_format(format[i++], args);
 		}
 		else
 		{
@@ -31,6 +32,5 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(args);
-
 	return (count_length);
 }
