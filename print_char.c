@@ -6,10 +6,10 @@
  * *args: arguments list
  */
 
-void print_char(va_list *args)
+void print_char(va_list args)
 {
 	int c;
 
 	c = va_arg(args, char);
-	_putchar(c)
+	_putchar(c);
 }
