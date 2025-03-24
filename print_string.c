@@ -4,9 +4,11 @@
  * print_string - That function to print a string arguments
  *
  * @args: arguments list
+ *
+ * Return: i
  */
 
-void print_string(va_list args)
+int print_string(va_list args)
 {
 	char *str;
 	int i;
@@ -17,4 +19,5 @@ void print_string(va_list args)
 	{
 		_putchar(str[i]);
 	}
+	return (i);
 }

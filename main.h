@@ -25,8 +25,8 @@ int _printf(const char *format, ...);
 
 int get_format(const char c, va_list arg);
 
-void print_char(va_list args);
-void print_string(va_list args);
+int print_char(va_list args);
+int print_string(va_list args);
 
 
 #endif
