@@ -14,7 +14,7 @@
 int get_format(const char c, va_list args)
 {
 	type_t type[] = {
-	/*{'s', print_string},*/
+	{'s', print_string},
 	{'c', print_char},
 	{'\0', NULL}
 	};
