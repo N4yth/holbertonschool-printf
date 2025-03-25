@@ -29,6 +29,10 @@ int get_format(const char c, va_list args)
 		i++;
 	}
 	_putchar('%');
-	_putchar(c);
+	if (c != '%')
+	{
+		_putchar(c);
+		return (1);
+	}
 	return (2);
 }
