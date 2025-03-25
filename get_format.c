@@ -32,7 +32,7 @@ int get_format(const char c, va_list args)
 	if (c != '%')
 	{
 		_putchar(c);
-		return (1);
+		return (2);
 	}
-	return (2);
+	return (1);
 }
