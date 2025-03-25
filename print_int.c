@@ -10,33 +10,36 @@
 
 int print_int(va_list args)
 {
-	int val, rev_val = 0, i;
-	int count = 0; /* the number of number to print (without: -) */
+	unsigned int val, val_count, count = 1;
+	int val_start;
 	int length = 0; /* the length of all printed character */
 
-	val = va_arg(args, int);
-	if (val < 0)
+	val_start = va_arg(args, int);
+	if (val_start < 0)
 	{
 		_putchar('-');
 		length++;
-		val = val * -1;
+		val = val_start * -1;
 	}
-	else if (val == 0)
+	else if (val_start == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
-	while (val != 0) /* reverse the val to easly print */
+	else
 	{
-		count++;
-		length++;
-		rev_val = rev_val * 10 + (val % 10);
-		val = val / 10;
+		val = val_start; /* set the start value to unsigned */
 	}
-	for (i = 0 ; i < count ; i++)
+	val_count = val;
+	while (val_count > 9)
 	{
-		_putchar((rev_val % 10) + 48);
-		rev_val /= 10;
+		val_count /= 10;
+		count = count * 10;
+	}
+	while (count >= 1)
+	{
+		length += _putchar(((val / count) % 10) + '0');
+		count /= 10;
 	}
 	return (length);
 }
