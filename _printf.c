@@ -19,15 +19,20 @@ int _printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] == '\0')
 		{
-			get_format(format[i++], args);
+			i++;
+			count_length += get_format(format[i], args);
+		}
+		else if (format[i] == '%' && format[i + 1] == '\0')
+		{
+			return (-1);
 		}
 		else
 		{
 			_putchar(format[i]);
+			count_length++;
 		}
-		count_length++;
 		i++;
 	}
 	va_end(args);
