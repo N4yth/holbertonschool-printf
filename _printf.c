@@ -20,14 +20,14 @@ int _printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%' && format[i + 1] == '\0')
+		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			i++;
 			count_length += get_format(format[i], args);
 		}
 		else if (format[i] == '%' && format[i + 1] == '\0')
 		{
-			return (-1);
+			return (0);
 		}
 		else
 		{
