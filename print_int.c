@@ -21,6 +21,11 @@ int print_int(va_list args)
 		length++;
 		val = val * -1;
 	}
+	else if (val == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	while (val != 0) /* reverse the val to easly print */
 	{
 		count++;
