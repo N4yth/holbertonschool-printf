@@ -16,6 +16,8 @@ int get_format(const char c, va_list args)
 	type_t type[] = {
 	{'s', print_string},
 	{'c', print_char},
+	{'i', print_int},
+	{'d', print_decim},
 	{'\0', NULL}
 	};
 	int i = 0;
