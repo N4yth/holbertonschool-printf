@@ -31,7 +31,7 @@ int print_decim(va_list args)
 		for (i = 0 ; i < count ; i++)
 		{
 			_putchar((rev_num % 10) + 48);
-			rev_num /= 10
+			rev_num /= 10;
 		}
 		return (length);
 }
