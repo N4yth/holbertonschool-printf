@@ -18,6 +18,7 @@ int get_format(const char c, va_list args)
 	{'c', print_char},
 	{'i', print_int},
 	{'d', print_int},
+	{'b', print_binary},
 	{'\0', NULL}
 	};
 	int i = 0;
