@@ -1,0 +1,90 @@
+.TH \_PRINTF 3 "March 2025" "Holberton Project" "Library Functions Manual"
+.SH NAME
+_printf \- Produces output according to format.
+.SH SYNOPSIS
+.B #include "main.h"
+.sp
+.B int _printf(const char *format, ...);
+.SH DESCRIPTION
+The `_printf` function produces output according to a specified format string and associated arguments, similar to the standard `printf` function in C. It supports custom formatting and types, such as characters, strings, and integers. This implementation uses variadic functions, allowing for a flexible number of arguments to be passed.
+.PP
+The `_putchar` function is a utility used to write a character to standard output, `stdout`.
+.SH FUNCTIONALITY
+The `_printf` function operates as follows:
+.IP
+- It initializes a `va_list` to iterate over the variable arguments.
+.IP
+- It processes each character of the format string:
+.IP
+- If the character is not a `%`, it is printed directly using the `_putchar` function.
+.IP
+- If the character is a `%`, the function checks the next character to determine the correct format type and calls the appropriate printing function.
+.TP
+.BR Supported formats include:
+.TP
+.BR c
+- Prints a character.
+.TP
+.BR s
+- Prints a string.
+.TP
+.BR i, d
+- Prints an integer and a signed decimal.
+.TP
+.BR b
+- Prints an integer in binary format.
+.IP
+- If no matching format is found, the function prints `%` followed by the format character.
+.SH RETURN VALUE
+The function returns the total number of characters printed (excluding the null byte). If an invalid format string is provided (e.g., a `%` at the end without a valid format specifier), it returns `-1`.
+.SH EXAMPLES
+.PP
+The following code examples demonstrate how to use the `_printf` function:
+.sp
+.B Example 1:
+.RS 4
+.nf
+_printf("Hello, %s!\n", "world");
+.fi
+.RE
+Output: 
+Hello, world!
+.sp
+.B Example 2:
+.RS 4
+.nf
+_printf("Character: %c\n", 'A');
+.fi
+.RE
+Output: 
+Character: A
+.sp
+.B Example 3:
+.RS 4
+.nf
+_printf("Integer: %i\n", 42);
+.fi
+.RE
+Output: 
+Integer: 42
+.sp
+.B Example 4:
+.RS 4
+.nf
+_printf("Binary: %b\n", 5);
+.fi
+.RE
+Output: 
+Binary: 101
+.SH SEE ALSO
+.BR printf (3), 
+.BR man (7), 
+.BR man-pages (7),
+.BR mdoc (7),
+.SH BUGS
+This implementation is not complete and does not support all format specifiers
+available in the standard `printf` function. Only the basic ones (%c, %s, %d, %i, and %%)
+are currently supported.
+.SH AUTHOR
+Nathan & Baptiste
+
