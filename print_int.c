@@ -10,7 +10,7 @@
 
 int print_int(va_list args)
 {
-	unsigned int val, val_count, count = 1;
+	unsigned int val, val_count, ten_count = 1;
 	int val_start;
 	int length = 0; /* the length of all printed character */
 
@@ -19,27 +19,22 @@ int print_int(va_list args)
 	{
 		_putchar('-');
 		length++;
-		val = val_start * -1;
-	}
-	else if (val_start == 0)
-	{
-		_putchar('0');
-		return (1);
+		val = val_start * -1;/*set val_strat to positif and unsigned*/
 	}
 	else
 	{
 		val = val_start; /* set the start value to unsigned */
 	}
-	val_count = val;
-	while (val_count > 9)
+	val_count = val;/*copy the val and use this copy as a count variable*/
+	while (val_count > 9) /*use the first counter to make a tens counter*/
 	{
 		val_count /= 10;
-		count = count * 10;
+		ten_count = ten_count * 10; /* count up */
 	}
-	while (count >= 1)
+	while (ten_count >= 1)
 	{
-		length += _putchar(((val / count) % 10) + '0');
-		count /= 10;
+		length += _putchar(((val / ten_count) % 10) + '0');
+		ten_count /= 10; /* count down */
 	}
 	return (length);
 }
