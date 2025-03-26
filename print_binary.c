@@ -45,6 +45,6 @@ int print_binary(va_list args)
 		count_power--;
 	}
 	_putchar(rest + '0');
-
-	return (lenght++);
+	lenght++;
+	return (lenght);
 }
