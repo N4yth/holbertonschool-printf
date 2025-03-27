@@ -10,8 +10,10 @@
 
 int print_binary(va_list args)
 {
-	int rest = 0, lenght = 0;
-	long int int_val, count_power = 0, power_two = 1;
+	int lenght = 0;
+	long int int_val;
+	long int count_power = 0; /* the power number */
+	long int power_two = 1; /* the result of to of the power count_power */
 
 	int_val = va_arg(args, long int);
 
@@ -19,18 +21,13 @@ int print_binary(va_list args)
 	{
 		int_val *= -1;
 	}
-	if (int_val % 2 != 0)
-	{
-		int_val -= 1;
-		rest = 1;
-	}
-	while (power_two <= int_val)
+	while (power_two <= int_val) /* found the power that higher than int_val */
 	{
 		power_two *= 2;
 		count_power++;
 	}
-	count_power--;
-	while (count_power > 0)
+	count_power--; /* not necessary to test the 2 power higher than int_val */
+	while (count_power >= 0)
 	{
 		if (power(2, count_power) > int_val)
 		{
@@ -44,7 +41,5 @@ int print_binary(va_list args)
 		lenght++;
 		count_power--;
 	}
-	_putchar(rest + '0');
-	lenght++;
 	return (lenght);
 }
