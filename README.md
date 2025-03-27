@@ -3,7 +3,7 @@
 
 ## <ins>Overview
 
-* [Description](../README.md#description:)
+* [Description](#description-)
 
 
 ## <ins>Description <[📚](https://en.wikipedia.org/wiki/Printf)>:
