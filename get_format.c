@@ -23,16 +23,16 @@ int get_format(const char c, va_list args)
 	};
 	int i = 0;
 
-	while (type[i].type != '\0')
+	while (type[i].type != '\0') /* iterate through the format list */
 	{
-		if (type[i].type == c)
+		if (type[i].type == c) /* check the format i with c the format given */
 		{
-			return (type[i].f(args));
+			return (type[i].f(args)); /* return the associate function */
 		}
 		i++;
 	}
-	_putchar('%');
-	if (c != '%')
+	_putchar('%'); /* the format send do not match with any format so print % */
+	if (c != '%') /* no need to print a sedonc % */
 	{
 		_putchar(c);
 		return (2);
