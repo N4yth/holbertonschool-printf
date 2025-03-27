@@ -4,7 +4,7 @@
 ## <ins>Overview
 
 * [Description](#description-)
-
+* [Exemples](#exemples-)
 
 ## <ins>Description <[📚](https://en.wikipedia.org/wiki/Printf)>:
 The **`_printf`** command converts, formats, and writes its Argument parameters to standard output. 
