@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 		else /* the % is not found so juste print the actual char */
 		{
 			_putchar(format[i]);
-			count_length++; /
+			count_length++;
 		}
 		i++;
 	}
