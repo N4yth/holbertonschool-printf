@@ -149,6 +149,7 @@ test 2
 
 The flowchart for our command **`_printf`** :
 
+![Flowchart](https://raw.githubusercontent.com/N4yth/holbertonschool-printf/refs/heads/main/0img/flowchart.jpeg)
 
 ## <ins>Authors :
 
