@@ -3,21 +3,41 @@
 
 ## <ins>Overview
 
-* [Description](#description-)
+* [Project _printf](#project-_printf)
+* [Compilation](#compilation-)
+* [Requirements](#requirements-)
 * [Exemples](#exemples-)
-* [test](#testing-)
-## <ins>Description <[📚](https://en.wikipedia.org/wiki/Printf)>:
-The **`_printf`** command converts, formats, and writes its Argument parameters to standard output. 
+* [Man_page](#man-page-)
+* [Testing](#testing-)
+* [Flowchart](#flowchart-)
+* [Authors](#authors-)
+
+## Project _printf<[📚](https://en.wikipedia.org/wiki/Printf)>:
+1. Description:
+- The **`_printf`** command converts, formats, and writes its Argument parameters to standard output. 
 In the standard library provides many other similar functions that form a family of printf-like functions. These functions accept a format string parameter and a variable number of value parameters that the function serializes per the format string and writes to an output stream or a string buffer.
 A format specifier starts with a % character and has one or more following characters that specify how to serialize a value.
 
 | Specifier | Fonctionnalité | Exemples |
 | :---------: | :------------- | :------------------|
-|%    |A literal percent character. No argument is required                                | %..                              |
-|c    |The argument is treated as an integer and presented as the character with that ASCII| %c = H a ? +                     |
+|%    |A literal percent character. No argument is required                                %..                              |
+|c    |The argument is treated as an integer and presented as  the character with that ASCII| %c = H a ? +                     |
 |s    |The argument is treated and presented as a string                                   | %s = "Hello World"               |
 |d , i|The argument is treated as an integer and presented as a (signed) decimal number    | %d = '43951789' / %i = '43951789'|
 |b    |The argument is treated as an integer and presented as a binary number              | %b = '10100111101010011010101101'|
+
+2. Features :
+
+Our custom `_printf` function supports the following features:
+
+- Displaying integers (int).
+- Displaying characters (char).
+- Displaying strings (string).
+- Handling variadic arguments using va_list and va_arg.
+
+3. Technologies:
+
+![](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white) 
 
 ## <ins>Compilation <[💾](https://raw.githubusercontent.com/N4yth/holbertonschool-printf/refs/heads/Baptiste/0img/Gcc.png)>:
 For compilation use : **`gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format c`**
