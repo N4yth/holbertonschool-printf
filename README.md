@@ -26,18 +26,22 @@ A format specifier starts with a % character and has one or more following chara
 |d , i|The argument is treated as an integer and presented as a (signed) decimal number    | %d = '43951789' / %i = '43951789'|
 |b    |The argument is treated as an integer and presented as a binary number              | %b = '10100111101010011010101101'|
 
-2. Features :
+>2. Features :
+>
+>Our custom `_printf` function supports the following features:
+>
+>- Displaying integers (int).
+>- Displaying characters (char).
+>- Displaying strings (string).
+>- Handling variadic arguments using va_list and va_arg.
 
-Our custom `_printf` function supports the following features:
 
-- Displaying integers (int).
-- Displaying characters (char).
-- Displaying strings (string).
-- Handling variadic arguments using va_list and va_arg.
-
-3. Technologies:
-
-![](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white) 
+>3. Technologies:
+>
+>![](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&>logoColor=white) 
+>![](https://img.shields.io/badge/VIM-%2311AB00.svg?&style=for-the-badge&logo=vim&logoColor=white)
+>![](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)
+>![](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 ## <ins>Compilation <[💾](https://raw.githubusercontent.com/N4yth/holbertonschool-printf/refs/heads/Baptiste/0img/Gcc.png)>:
 For compilation use : **`gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format c`**
