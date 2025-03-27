@@ -13,7 +13,7 @@ int long power(int a, int b)
 {
 	int long result = 1;
 
-	while (b)
+	while (b) /* irate b while is not equal to 0 */
 	{
 		result *= a;
 		b--;
