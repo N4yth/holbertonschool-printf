@@ -14,25 +14,25 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	unsigned int i = 0;
-	int count_length = 0;
+	int count_length = 0; /* number of character print */
 
 	va_start(args, format);
 
-	while (format[i] != '\0')
+	while (format[i] != '\0') /* move on all element of the first string */
 	{
 		if (format[i] == '%' && format[i + 1] != '\0')
 		{
-			i++;
+			i++; /* the % is found and the next char is not null */
 			count_length += get_format(format[i], args);
 		}
 		else if (format[i] == '%' && format[i + 1] == '\0')
 		{
-			return (-1);
+			return (-1); /* the char after % is null */
 		}
-		else
+		else /* the % is not found so juste print the actual char */
 		{
-			_putchar(format[i]);
-			count_length++;
+			_putchar(format[i]); 
+			count_length++; /
 		}
 		i++;
 	}
