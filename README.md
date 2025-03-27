@@ -3,17 +3,18 @@
 
 ## <ins>Overview
 
-1. [Project _printf](#project-_printf)
-    - #### [Description](#description-1)
-      - #### [Features](#features-)
-        - #### [Technology](#technology)
-* [Compilation](#compilation-)
-* [Requirements](#requirements-)
-* [Exemples](#exemples-)
-* [Man_page](#man-page-)
-* [Testing](#testing-)
-* [Flowchart](#flowchart-)
-* [Authors](#authors-)
+- ### [Project _printf](#project-_printf)
+  - #### [Description](#description-1)
+  - #### [Features](#features-)
+  - #### [Technology](#technology-1)
+  - #### [Structure_project](#structure_project-1)
+- ### [Compilation](#compilation-)
+- ### [Requirements](#requirements-)
+- ### [Exemples](#exemples-)
+- ### [Man_page](#man-page-)
+- ### [Testing](#testing-)
+- ### [Flowchart](#flowchart-)
+- ### [Authors](#authors-)
 
 ## Project _printf<[📚](https://en.wikipedia.org/wiki/Printf)>:
 ### Description:
@@ -21,7 +22,7 @@
 In the standard library provides many other similar functions that form a family of printf-like functions. These functions accept a format string parameter and a variable number of value parameters that the function serializes per the format string and writes to an output stream or a string buffer.
 A format specifier starts with a % character and has one or more following characters that specify how to serialize a value.
 
-| Specifier | Fonctionnalité | Exemples |
+| Specifier | Fonctionnality | Exemples |
 | :---------: | :------------- | :------------------|
 |%    |A literal percent character. No argument is required                                %..                              |
 |c    |The argument is treated as an integer and presented as  the character with that ASCII| %c = H a ? +                     |
@@ -29,7 +30,7 @@ A format specifier starts with a % character and has one or more following chara
 |d , i|The argument is treated as an integer and presented as a (signed) decimal number    | %d = '43951789' / %i = '43951789'|
 |b    |The argument is treated as an integer and presented as a binary number              | %b = '10100111101010011010101101'|
 
->### Features :
+>### Features:
 >
 >Our custom `_printf` function supports the following features:
 >
@@ -45,6 +46,20 @@ A format specifier starts with a % character and has one or more following chara
 >![](https://img.shields.io/badge/VIM-%2311AB00.svg?&style=for-the-badge&logo=vim&logoColor=white)
 >![](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)
 >![](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+
+### Structure_project:
+|                             Files Name                                                            |                     Fonctionnality                 |
+| :---------                                                                                        |            :-------------                          |
+|[`[main.h]`](https://github.com/N4yth/holbertonschool-printf/blob/Baptiste/main.h)                |The header file containing function prototypes and macros|
+|[`_printf.c`](https://github.com/N4yth/holbertonschool-printf/blob/Baptiste/_printf.c)            |The main function that replicates printf behavior|
+|[`_putchar.c`](https://github.com/N4yth/holbertonschool-printf/blob/Baptiste/_putchar.c)          |Function to print a single character to standard output|
+|[`get_format.c`](https://github.com/N4yth/holbertonschool-printf/blob/Baptiste/get_format.c)      |Function to determine the correct format specifier and call the corresponding print function
+|[`print_char.c`](https://github.com/N4yth/holbertonschool-printf/blob/Baptiste/print_char.c)      |Function to handle the printing of characters|
+|[`print_int.c`](https://github.com/N4yth/holbertonschool-printf/blob/Baptiste/print_int.c)        |Function to handle the printing of integers|
+|[`print_string.c`](https://github.com/N4yth/holbertonschool-printf/blob/Baptiste/print_string.c)  |Function to handle the printing of strings|
+|[`print_binary.c`](https://github.com/N4yth/holbertonschool-printf/blob/Baptiste/print_binary.c)  |Function to convert and print integers in binary format|
+|[`power.c`](https://github.com/N4yth/holbertonschool-printf/blob/Baptiste/power.c)                |Function to calculate the power of a number|
+|[`man_3_printf`](https://github.com/N4yth/holbertonschool-printf/blob/Baptiste/man_3_printf)      |Manual page explaining the usage of `_printf`|
 
 ## <ins>Compilation <[💾](https://raw.githubusercontent.com/N4yth/holbertonschool-printf/refs/heads/Baptiste/0img/Gcc.png)>:
 For compilation use : **`gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format c`**
@@ -103,7 +118,7 @@ For read man pag `_printf` is <ins>[Here](https://github.com/N4yth/holbertonscho
 - Our main files will include your main header file (main.h): #include main.h
 - You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. 
 
-## <ins>Testing <📝>:
+## <ins>Testing 📝:
 To test for memory leaks, you use "Valgrind" followed by the executable. The executable command for the example is: **`valgrind ./a.aout`**
 ````
 :~/holbertonschool-printf$ valgrind ./a.out
@@ -130,7 +145,7 @@ test 2
 ==5895== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 ````
 
-## <ins>Flowchart <📈>:
+## <ins>Flowchart 📈:
 
 The flowchart for our command **`_printf`** :
 
