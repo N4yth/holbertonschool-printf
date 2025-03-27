@@ -5,7 +5,7 @@
 
 - ### [Project _printf](#project-_printf)
   - #### [Description](#description-1)
-  - #### [Features](#features-)
+  - #### [Features](#features-1)
   - #### [Technology](#technology-1)
   - #### [Structure_project](#structure_project-1)
 - ### [Compilation](#compilation-)
