@@ -2,12 +2,11 @@
 #define HOLBERTON_H
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <stdarg.h>
-#include <unistd.h>
 
 /**
- * struct type -  that struct
+ * struct type -  will stock the format/type of what we need to print
+ * and the function the we will use to print this format/type
  *
  * @type: char that is the format for the function.
  * @f: the print function of the designed format.
