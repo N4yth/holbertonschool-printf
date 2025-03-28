@@ -4,10 +4,10 @@
 ## <ins>Overview
 
 - [Project _printf](#project-_printf)
-  - [Description](#description-1)
-  - [Features](#features-1)
-  - [Technology](#technology-1)
-  - [Structure_project](#structure_project-1)
+  - [Description](#description)
+  - [Features](#features)
+  - [Technology](#technology)
+  - [Structure_project](#structure_project)
 - [Compilation](#compilation-)
 - [Requirements](#requirements-)
 - [Exemples](#exemples-)
