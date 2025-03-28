@@ -3,18 +3,18 @@
 
 ## <ins>Overview
 
-- ### [Project _printf](#project-_printf)
-  - #### [Description](#description-1)
-  - #### [Features](#features-1)
-  - #### [Technology](#technology-1)
-  - #### [Structure_project](#structure_project-1)
-- ### [Compilation](#compilation-)
-- ### [Requirements](#requirements-)
-- ### [Exemples](#exemples-)
-- ### [Man_page](#man-page-)
-- ### [Testing](#testing-)
-- ### [Flowchart](#flowchart-)
-- ### [Authors](#authors-)
+- [Project _printf](#project-_printf)
+  - [Description](#description)
+  - [Features](#features)
+  - [Technology](#technology)
+  - [Structure_project](#structure_project)
+- [Compilation](#compilation-)
+- [Requirements](#requirements-)
+- [Exemples](#exemples-)
+- [Man_page](#man-page-)
+- [Testing](#testing-)
+- [Flowchart](#flowchart-)
+- [Authors](#authors-)
 
 ## Project _printf<[📚](https://en.wikipedia.org/wiki/Printf)>:
 ### Description:
@@ -37,6 +37,7 @@ A format specifier starts with a % character and has one or more following chara
 >- Displaying integers (int).
 >- Displaying characters (char).
 >- Displaying strings (string).
+>- Displaying binary (unsigned int).
 >- Handling variadic arguments using va_list and va_arg.
 
 
@@ -46,6 +47,7 @@ A format specifier starts with a % character and has one or more following chara
 >![](https://img.shields.io/badge/VIM-%2311AB00.svg?&style=for-the-badge&logo=vim&logoColor=white)
 >![](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)
 >![](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+>![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 
 ### Structure_project:
 |                             Files Name                                                            |                     Fonctionnality                 |
